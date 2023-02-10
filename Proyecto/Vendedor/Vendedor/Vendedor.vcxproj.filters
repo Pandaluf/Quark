@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Archivos de origen">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Archivos de encabezado">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Archivos de recursos">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="View">
+      <UniqueIdentifier>{25fd6482-8452-4f93-8231-5e2a6a700bf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App">
+      <UniqueIdentifier>{9ff447ec-0c5b-45b0-ab90-fb49acd9c447}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Presenter">
+      <UniqueIdentifier>{8b0e22df-ebb5-4e60-bbcc-a6d104ebfaa5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain">
+      <UniqueIdentifier>{1413d7a2-57cd-4a56-bf92-78d47b623bbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Tienda">
+      <UniqueIdentifier>{c7505674-dd5a-40a1-810f-83b0e6fe147c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Vendedor">
+      <UniqueIdentifier>{1d084a2b-9073-4722-a8f8-d579aed57a09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Cotización">
+      <UniqueIdentifier>{9dd6576d-11bd-4b0e-945c-3fc96aed230a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Prenda">
+      <UniqueIdentifier>{9f9db9e9-de37-43f7-b169-d51b3d593341}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Prenda\Tipos">
+      <UniqueIdentifier>{aa0050ac-2cdb-491d-a8f9-80665e9a6c12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Presenter\Presenter Class">
+      <UniqueIdentifier>{99d79196-dee2-4b5b-a880-1abee4bf0989}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View\IView">
+      <UniqueIdentifier>{eb184a57-5aee-4cc4-aab8-e149ccdbbf75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View\View Class">
+      <UniqueIdentifier>{e5375b30-adc1-46ad-871f-476a8d67d4ed}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Cotización.h">
+      <Filter>Domain\Cotización</Filter>
+    </ClInclude>
+    <ClInclude Include="Prenda.h">
+      <Filter>Domain\Prenda</Filter>
+    </ClInclude>
+    <ClInclude Include="Pantalón.h">
+      <Filter>Domain\Prenda\Tipos</Filter>
+    </ClInclude>
+    <ClInclude Include="Camisa.h">
+      <Filter>Domain\Prenda\Tipos</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendedor.h">
+      <Filter>Domain\Vendedor</Filter>
+    </ClInclude>
+    <ClInclude Include="Tienda.h">
+      <Filter>Domain\Tienda</Filter>
+    </ClInclude>
+    <ClInclude Include="Presenter.h">
+      <Filter>Presenter\Presenter Class</Filter>
+    </ClInclude>
+    <ClInclude Include="IView.h">
+      <Filter>View\IView</Filter>
+    </ClInclude>
+    <ClInclude Include="View.h">
+      <Filter>View\View Class</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
