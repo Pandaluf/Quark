@@ -20,6 +20,12 @@ public:
 		tienda = new Tienda("Ripley", "Cercado de Lima");
 	}
 
+	~Presenter() {
+		delete vendedor;
+		delete tienda;
+		delete iview;
+	}
+
 	void insertarPrenda(double precioUnitario, string calidad, int unidades, int RN, vector<string> tipo) {
 		if (tipo[0] == "Camisa") {
 			Camisa* prenda1 = new Camisa(tienda->totalCamisas(), precioUnitario, calidad, unidades, RN, tipo);

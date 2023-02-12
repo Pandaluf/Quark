@@ -26,10 +26,6 @@ public:
 		precioFinal = 0;
 		descuentoPorcentaje = 0;
 	}
-	~Cotizacion() {
-
-	}
-
 
 	void precioFinalCotizacion() {
 		if (prenda->getRN() == 1) {

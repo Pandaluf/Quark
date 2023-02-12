@@ -22,6 +22,10 @@ public:
 		mostrarMenuPrincipal();
 	}
 
+	~View() {
+		delete presenter;
+	}
+
 	void mostrarMenuPrincipal() {
 		short opcion;
 		do {
