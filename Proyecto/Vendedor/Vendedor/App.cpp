@@ -1,7 +1,8 @@
-#include <iostream>
+#include "View.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    View view;
+    return 0;
 }
 

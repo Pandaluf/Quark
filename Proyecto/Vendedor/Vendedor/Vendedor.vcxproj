@@ -130,13 +130,13 @@
     <ClCompile Include="App.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Tienda.h" />
     <ClInclude Include="Camisa.h" />
     <ClInclude Include="Cotización.h" />
     <ClInclude Include="IView.h" />
     <ClInclude Include="Pantalón.h" />
     <ClInclude Include="Prenda.h" />
     <ClInclude Include="Presenter.h" />
-    <ClInclude Include="Tienda.h" />
     <ClInclude Include="Vendedor.h" />
     <ClInclude Include="View.h" />
   </ItemGroup>

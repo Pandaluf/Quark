@@ -51,11 +51,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="App.cpp">
-      <Filter>App</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Cotización.h">
       <Filter>Domain\Cotización</Filter>
     </ClInclude>
@@ -68,12 +63,6 @@
     <ClInclude Include="Camisa.h">
       <Filter>Domain\Prenda\Tipos</Filter>
     </ClInclude>
-    <ClInclude Include="Vendedor.h">
-      <Filter>Domain\Vendedor</Filter>
-    </ClInclude>
-    <ClInclude Include="Tienda.h">
-      <Filter>Domain\Tienda</Filter>
-    </ClInclude>
     <ClInclude Include="Presenter.h">
       <Filter>Presenter\Presenter Class</Filter>
     </ClInclude>
@@ -83,5 +72,16 @@
     <ClInclude Include="View.h">
       <Filter>View\View Class</Filter>
     </ClInclude>
+    <ClInclude Include="Vendedor.h">
+      <Filter>Domain\Vendedor</Filter>
+    </ClInclude>
+    <ClInclude Include="Tienda.h">
+      <Filter>Domain\Tienda</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
