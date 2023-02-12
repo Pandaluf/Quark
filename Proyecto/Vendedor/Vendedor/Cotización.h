@@ -37,8 +37,7 @@ public:
 			}
 			else {
 				if (prenda->getRN() == 3) {
-					prenda->setRN(1);
-					precioFinal = (unidades * prenda->getPrecioUnitario()) + prenda->calcularDescuentoTipo();
+					precioFinal = (unidades * prenda->getPrecioUnitario()) - ((unidades * prenda->getPrecioUnitario())*0.10);
 					precioFinal = precioFinal + (precioFinal * 0.03);
 				}
 				else {

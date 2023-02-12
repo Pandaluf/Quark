@@ -3,6 +3,7 @@
 #include <Windows.h>
 #include "IView.h"
 #include "Presenter.h"
+#include <ctype.h>
 
 void cotizarText() {
 	cout << "COIZADOR EXPRESS - MENÚ PRINCIPAL\n";
@@ -27,7 +28,8 @@ public:
 	}
 
 	void mostrarMenuPrincipal() {
-		short opcion;
+		string opcion;
+
 		do {
 			system("cls");
 			cout << "COIZADOR EXPRESS - MENÚ PRINCIPAL\n";
@@ -42,13 +44,13 @@ public:
 			cout << "3) Salir\n";
 			cin >> opcion;
 
-		} while (opcion != 1 && opcion != 2 && opcion != 3);
+		} while (opcion != "1" && opcion != "2" && opcion != "3");
 
 		ejecutarOpcion(opcion);
 	}
 
-	void ejecutarOpcion(short& opcion) {
-		if (opcion == 1) {
+	void ejecutarOpcion(string& opcion) {
+		if (opcion == "1") {
 			system("cls");
 			presenter->mostrarCotizaciones();
 			cout << "\n";
@@ -56,7 +58,7 @@ public:
 			mostrarMenuPrincipal();
 		}
 		else {
-			if (opcion == 2) {
+			if (opcion == "2") {
 				cotizar();
 				cout << "\n";
 				system("pause");
@@ -69,9 +71,10 @@ public:
 	}
 
 	void cotizar() {
-		short opcion;
+		string opcion;
 
 		vector<string> tipo;
+
 
 		do {
 			system("cls");
@@ -81,25 +84,26 @@ public:
 			cout << "2) Pantalón\n";
 			cout << "-----------------------------------------------------\n";
 			cin >> opcion;
-		} while (opcion != 1 && opcion != 2 && opcion != 3);
+		} while (opcion != "1" && opcion != "2" && opcion != "3");
 
-		if (opcion == 1) tipo.push_back("Camisa");
+
+		if (opcion == "1") tipo.push_back("Camisa");
 		else tipo.push_back("Pantalón");
 
 		opcionPrenda(opcion, tipo);
 	}
 
-	void opcionPrenda(short& opcion, vector<string>& tipo) {
-		short opcionParte3;
+	void opcionPrenda(string& opcion, vector<string>& tipo) {
+		string opcionParte3;
 		double precioUnitario;
 		int unidades;
 		short RN = 0;
 		string calidad;
 		double cantidadPrenda = 0;
 
-		if (opcion == 1) {
-			short opcionParte2a;
-			short opcionParte2b;
+		if (opcion == "1") {
+			string opcionParte2a;
+			string opcionParte2b;
 
 			do {
 				system("cls");
@@ -109,11 +113,11 @@ public:
 				cout << "2) No\n";
 				cout << "-----------------------------------------------------\n";
 				cin >> opcionParte2a;
-			} while (opcionParte2a != 1 && opcionParte2a != 2 && opcionParte2a != 3);
+			} while (opcionParte2a != "1" && opcionParte2a != "2" && opcionParte2a != "3");
 
-			if(opcionParte2a == 3) mostrarMenuPrincipal();
+			if (opcionParte2a == "3") mostrarMenuPrincipal();
 
-			if (opcionParte2a == 1) {
+			if (opcionParte2a == "1") {
 				tipo.push_back("Manga corta");
 				RN = 1;
 			} else tipo.push_back("Manga larga");
@@ -129,16 +133,16 @@ public:
 				cout << "2) No\n";
 				cout << "-----------------------------------------------------\n";
 				cin >> opcionParte2b;
-			} while (opcionParte2b != 1 && opcionParte2b != 2 && opcionParte2b != 3);
+			} while (opcionParte2b != "1" && opcionParte2b != "2" && opcionParte2b != "3");
 
-			if (opcionParte2b == 3) mostrarMenuPrincipal();
+			if (opcionParte2b == "3") mostrarMenuPrincipal();
 
-			if (opcionParte2b == 1) {
+			if (opcionParte2b == "1") {
 				tipo.push_back("Cuello Mao");
 				RN = 2;
 			}
 
-			if (opcionParte2a == 1 && opcionParte2b == 1) {
+			if (opcionParte2a == "1" && opcionParte2b == "1") {
 				RN = 3;
 			}
 				
@@ -146,8 +150,8 @@ public:
 
 		}
 		else {
-			if (opcion == 2) {
-				short opcionParte2;
+			if (opcion == "2") {
+				string opcionParte2;
 				do {
 					system("cls");
 					cotizarText();
@@ -156,9 +160,9 @@ public:
 					cout << "2) No\n";
 					cout << "-----------------------------------------------------\n";
 					cin >> opcionParte2;
-				} while (opcionParte2 != 1 && opcionParte2 != 2 && opcionParte2 != 3);
+				} while (opcionParte2 != "1" && opcionParte2 != "2" && opcionParte2 != "3");
 				
-				if (opcionParte2 == 1) {
+				if (opcionParte2 == "1") {
 					tipo.push_back("Chupín");
 					RN = 4;
 				}
@@ -181,27 +185,46 @@ public:
 			cout << "2) Premium\n";
 			cout << "-----------------------------------------------------\n";
 			cin >> opcionParte3;
-		} while (opcionParte3 != 1 && opcionParte3 != 2 && opcionParte3 != 3);
+		} while (opcionParte3 != "1" && opcionParte3 != "2" && opcionParte3 != "3");
 
-		if (opcionParte3 == 1) {
+		if (opcionParte3 == "1") {
 			calidad = "Standard";
 		}
 		else {
-			if (opcionParte3 == 2) {
+			if (opcionParte3 == "2") {
 				calidad = "Premium";
 			}
 		}
 
-		if (opcionParte3 == 3) mostrarMenuPrincipal();
+		if (opcionParte3 == "3") mostrarMenuPrincipal();
 
 		//**************************************************************************
 		//**************************************************************************
+
+		string cantidadAux;
+		bool esLetra = false;
 
 		do {
+			esLetra = false;
 			system("cls");
 			cotizarText();
 			cout << "PASO 4: Ingrese el precio unitario de la prenda\n";
-			cin >> precioUnitario;
+			cin >> cantidadAux;
+
+			for (int i = 0; i < cantidadAux.size(); i++) {
+				if (isalpha(cantidadAux[i])) {
+					esLetra = true;
+					continue;
+				}
+			}
+
+			if (esLetra == true) {
+				precioUnitario = -5;
+			}
+			else {
+				precioUnitario = atoi(cantidadAux.c_str());
+			}
+
 		} while (precioUnitario < 0 && precioUnitario != 3);
 
 		if (precioUnitario == 3) mostrarMenuPrincipal();
@@ -280,16 +303,31 @@ public:
 		/**********************************************************************************************/
 
 		do {
+			esLetra = false;
 			system("cls");
 			cotizarText();
 			cout << "\nINFORMACIÓN:\n";
 			cout << "EXISTE " << cantidadPrenda <<" CANTIDAD DE UNIDADES EN STOCK DE LA PRENDA SELECCIONADA\n\n";
 			cout << "PASO 5: Ingrese la cantidad de unidades a cotizar\n";
-			cin >> unidades;
+			cin >> cantidadAux;
 
-		} while (unidades <= 0 && unidades != 3 && cantidadPrenda - unidades < 0);
+			for (int i = 0; i < cantidadAux.size(); i++) {
+				if (isalpha(cantidadAux[i])) {
+					esLetra = true;
+					continue;
+				}
+			}
 
-		if (unidades == 3) mostrarMenuPrincipal();
+			if (esLetra == true) {
+				unidades = -5;
+			}
+			else {
+				unidades = atoi(cantidadAux.c_str());
+			}
+
+			if (unidades == 3) mostrarMenuPrincipal();
+
+		} while ((unidades <= 0 && unidades != 3) || cantidadPrenda - unidades < 0);
 
 		//**************************************************************************
 		//**************************************************************************
