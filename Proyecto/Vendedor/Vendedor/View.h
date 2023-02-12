@@ -296,7 +296,6 @@ public:
 
 		if (cantidadPrenda - unidades < 0) {
 			cout << "No hay unidades suficientes de la prenda seleccionada\n";
-			system("pause");
 		}
 		else {
 			presenter->insertarPrenda(precioUnitario, calidad, unidades, RN, tipo);
